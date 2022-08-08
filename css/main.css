@@ -1,0 +1,135 @@
+/*Global Rules:*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+	height: 2500px
+}
+/*--- Start To Do App ---*/
+.title {
+	margin-top: 50px;
+	text-align: center;
+	color: #3070B5;
+	font-size: 80px;
+	font-family: 'Ubuntu', sans-serif
+  }
+
+.do .main {
+	width: 615px;
+	margin: auto;
+	background-color: #306BC8;
+	display: flex;
+	height: 70px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px
+}
+
+.do .input {
+	border: none;
+	padding: 5px;
+	outline: none;
+	max-height: 50px;
+	min-height: 30px;
+	background-color: transparent;
+	color: #F4F4F4;
+	font-size: 1.7rem
+}
+
+.do .add {
+	border: none;
+	background-color: transparent;
+	color: #F4F4F4
+}
+
+.do .add i {
+	font-size: 2.5rem
+}
+
+.do .tasks {
+	width: 615px;
+	height: 615px;
+	margin: auto;
+	background-color: #4C89E8;
+	padding: 15px;
+	color: #F4F4F4
+}
+
+.do .tasks .task {
+	background-color: #FFF;
+	color: #4C89E8 !important;
+	margin-bottom: 10px;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.3rem;
+	border-radius: 5px
+}
+
+.do .tasks .done {
+	color: #F0E764 !important;
+	background-color: #395773;
+	font-size: 2.1rem;
+}
+
+.task:hover {
+	opacity: 0.9;
+	transition: all 0.5s ease-in-out
+}
+
+.task:hover i {
+	color: #4fe390 !important;
+	transition: all 0.5s ease-in-out
+}
+
+.do .tasks .task i {
+	font-size: 2rem;
+}
+
+.do .tasks .task .del {
+	color: #E5E7EA
+}
+
+.do .tasks .task:hover .del {
+	color: #B75EDF !important
+}
+
+.do .tasks .del {
+	color: #FFF;
+	background: none;
+	border: none;
+	padding: 7px 15px
+}
+
+.do .tasks .del:hover {
+	color: #FFEF04;
+}
+
+.do .ali {
+	text-align: center;
+	color: #617C99;
+	font-size: 1.1rem;
+	margin-top: 25px;
+}
+
+
+
+
+/*
+    *font-family: 'Cabin', sans-serif;
+    *font-family: 'Cairo', sans-serif;
+    *font-family: 'Dosis', sans-serif;
+    *font-family: 'Lato', sans-serif;
+    *font-family: 'Merriweather', serif;
+    *font-family: 'Noto Sans', sans-serif;
+    *font-family: 'Noto Sans JP', sans-serif;
+    *font-family: 'Open Sans', sans-serif;
+    *font-family: 'Poppins', sans-serif;
+    *font-family: 'Roboto', sans-serif;
+    *font-family: 'Source Sans Pro', sans-serif;
+    *font-family: 'Tajawal', sans-serif;
+    *font-family: 'Ubuntu', sans-serif;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    font-family: 'Poppins', sans-serif;
+*/
