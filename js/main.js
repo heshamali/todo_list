@@ -2,7 +2,7 @@
 // Get The Elements 
 let form = document.querySelector(".main");
 let input = document.querySelector(".input");
-let tasksDiv = document.querySelector(".tasks");
+let tasksDiv = document.querySelector(".do .tasks");
 
 // Create Array Of Tasks
 let tasks = [];
@@ -14,6 +14,19 @@ if (localStorage.getItem("tasks")) {
 
 // getData Function Execution
 getData();
+
+// No Task Div
+window.onload = function() {
+    noTasks();
+}
+function noTasks() {
+    if (tasksDiv.innerHTML == "") {
+        let noTask = document.createElement("div");
+        noTask.className = "no-task";
+        noTask.appendChild(document.createTextNode("No Tasks"));
+        tasksDiv.appendChild(noTask);
+    }
+}
 
 // Submit Button And Prevent Default
 form.onsubmit = function (e) {
@@ -39,6 +52,7 @@ tasksDiv.addEventListener("click", function (t) {
 
         //Delete The Div Of Task
         t.target.parentElement.remove();
+        noTasks();
 
     }
 
@@ -56,17 +70,34 @@ tasksDiv.addEventListener("click", function (t) {
         //     h.classList.add("fa-square-pen")
         // }
 
-
         let c = t.target.querySelector("i");
-        if (c.classList.contains("fa-square-pen")) {
-            c.classList.remove("fa-square-pen");
-            c.classList.add("fa-square-check");
-            c.style.color = "#F0E764";
-        } else {
-            c.classList.remove("fa-square-check");
-            c.classList.add("fa-square-pen");
-            c.style.color = "#4C89E8";
+        check(t.target.getAttribute("data-id"));
+        function check(taskId) {
+            for ( let i = 0; i < tasks.length; i++) {
+                if (tasks[i].id == taskId) {
+                    // tasks[i].statu == false ? tasks[i].statu = true : tasks[i].statu = false;
+                    if (tasks[i].statu == true) {
+                        c.classList.remove("fa-square-pen");
+                        c.classList.add("fa-square-check");
+                        c.style.color = "#F0E764";
+                    } else {
+                        c.classList.remove("fa-square-check");
+                        c.classList.add("fa-square-pen");
+                        c.style.color = "#4C89E8";
+                    }
+                }
+            }
+
         }
+        // if (c.classList.contains("fa-square-pen")) {
+        //     c.classList.remove("fa-square-pen");
+        //     c.classList.add("fa-square-check");
+        //     c.style.color = "#F0E764";
+        // } else {
+        //     c.classList.remove("fa-square-check");
+        //     c.classList.add("fa-square-pen");
+        //     c.style.color = "#4C89E8";
+        // }
     }
 });
 
@@ -116,10 +147,11 @@ function tasksPage(tasks) {
         btn.style.cursor = "pointer";
 
         div.appendChild(btn);
-
+        
         tasksDiv.appendChild(div);
 
     });
+    
 }
 
 
