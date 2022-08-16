@@ -36,6 +36,10 @@ body {
 	font-size: 1.7rem
 }
 
+.do .input::placeholder {
+	color: #DEE5EE
+}
+
 .do .add {
 	border: none;
 	background-color: transparent;
@@ -104,6 +108,15 @@ body {
 
 .do .tasks .del:hover {
 	color: #FFEF04;
+}
+
+.do .tasks .no-task {
+	color: #F4F4F4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	font-size: 2.5rem
 }
 
 .do .ali {
